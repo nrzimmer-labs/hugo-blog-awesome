@@ -15,8 +15,8 @@
 {{
     $ctx := merge (.Site.Params.webmanifest | default dict)
     (dict
-        "name" (.Site.Params.webmanifest.name | default .Site.Params.sitename | default .Site.Title)
-        "short_name" (.Site.Params.webmanifest.short_name | default .Site.Params.sitename | default .Site.Title)
+        "name" (.Site.Params.webmanifest.name | default .Site.Params.sitename | default .Site.Params.sitename)
+        "short_name" (.Site.Params.webmanifest.short_name | default .Site.Params.sitename | default .Site.Params.sitename)
         "start_url" (.Site.Params.webmanifest.start_url | default .Site.Home.Permalink)
         "theme_color" (.Site.Params.webmanifest.theme_color | default "#434648")
         "background_color" $background_color
